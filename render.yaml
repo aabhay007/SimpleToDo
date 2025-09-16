@@ -4,7 +4,7 @@ services:
     env: docker
     plan: free
     dockerfilePath: backend/Dockerfile
-    buildContext: ./backend
+    dockerContext: ./backend
     autoDeploy: true
 
   - type: web
@@ -12,5 +12,5 @@ services:
     env: docker
     plan: free
     dockerfilePath: frontend/Dockerfile
-    buildContext: ./frontend
+    dockerContext: ./frontend
     autoDeploy: true
