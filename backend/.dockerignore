@@ -1,0 +1,12 @@
+bin/
+obj/
+*.user
+*.suo
+*.swp
+*.tmp
+.vscode/
+.vs/
+.git/
+Dockerfile*
+**/*.Secrets.json
+**/*.Development.json

@@ -1,0 +1,41 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@adobe/react-spectrum": "^3.44.1",
+    "@apollo/client": "3.14.0",
+    "@react-spectrum/button": "^3.17.2",
+    "@react-spectrum/card": "^3.0.0-alpha.49",
+    "@react-spectrum/divider": "^3.5.26",
+    "@react-spectrum/layout": "^3.6.18",
+    "@react-spectrum/progress": "^3.7.19",
+    "@react-spectrum/provider": "^3.10.10",
+    "@react-spectrum/text": "^3.5.21",
+    "@react-spectrum/textfield": "^3.14.1",
+    "@react-spectrum/theme-default": "^3.5.21",
+    "@react-spectrum/view": "^3.6.22",
+    "@react-spectrum/well": "^3.4.26",
+    "graphql": "^16.11.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "vite": "^7.1.2"
+  }
+}

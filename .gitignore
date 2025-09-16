@@ -1,0 +1,98 @@
+# -----------------------------
+# .NET (C#) Ignore Rules
+# -----------------------------
+
+# Build results
+bin/
+obj/
+out/
+[Bb]uild/
+[Ll]og/
+[Ll]ogs/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vscode/
+.idea/
+
+# Visual Studio cache/options
+.vs/
+*.swp
+*.cache
+*.db
+*.opendb
+
+# Compiled files
+*.dll
+*.exe
+*.pdb
+*.mdb
+
+# NuGet packages
+*.nupkg
+packages/
+.nuget/
+project.lock.json
+
+# Others
+*.tmp
+*.bak
+*.log
+*.dmp
+
+# Test results
+TestResult*/
+*.TestResults/
+
+# Entity Framework Migrations
+[Mm]igrations/ (optional – remove if you want to keep migrations in repo)
+
+# -----------------------------
+# React (Node.js) Ignore Rules
+# -----------------------------
+
+# Dependencies
+node_modules/
+
+# Build output
+build/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Cache
+.cache/
+.next/
+.vite/
+.storybook-out/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Misc
+.DS_Store
+*.pem
+*.crt
+*.key
+
+# -----------------------------
+# General Editor / OS Files
+# -----------------------------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.swp
+*.swo
+*.tmp
+*.bak
+*.old

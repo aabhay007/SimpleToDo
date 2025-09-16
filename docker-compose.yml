@@ -1,0 +1,44 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: simpletodo-db
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=app
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  backend:
+    build:
+      context: ./backend
+    container_name: simpletodo-backend
+    restart: unless-stopped
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__DefaultConnection=Host=ep-old-math-a2v14rod-pooler.eu-central-1.aws.neon.tech;Database=neondb;Username=neondb_owner;Password=npg_ZuM8vpytw5Wx;SslMode=Require
+      - FrontendOrigin=http://localhost:8082
+    depends_on:
+      - db
+    ports:
+      - "8081:8080"
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        - VITE_API_URL=http://backend:8080/graphql
+    container_name: simpletodo-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "8082:80"
+
+volumes:
+  db_data:
