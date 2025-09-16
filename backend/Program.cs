@@ -15,11 +15,16 @@ builder.Services.AddPooledDbContextFactory<AppDbContext>(options =>
 
 // CORS: allow frontend to call backend
 var frontendOrigin = Environment.GetEnvironmentVariable("FrontendOrigin") ?? "http://localhost:8082";
+var allowedOrigins = new[]
+{
+    frontendOrigin,
+    "https://simpletodo-frontend.onrender.com"
+};
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("Frontend", policy =>
     {
-        policy.WithOrigins(frontendOrigin)
+        policy.WithOrigins(allowedOrigins)
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowCredentials();
