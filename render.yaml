@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: simpletodo-backend
+    env: docker
+    plan: free
+    dockerfilePath: backend/Dockerfile
+    buildContext: ./backend
+    autoDeploy: true
+
+  - type: web
+    name: simpletodo-frontend
+    env: docker
+    plan: free
+    dockerfilePath: frontend/Dockerfile
+    buildContext: ./frontend
+    autoDeploy: true
